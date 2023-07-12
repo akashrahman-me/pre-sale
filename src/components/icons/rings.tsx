@@ -24,7 +24,7 @@ export const Rings = ({
         stroke="#5200FF"
         strokeOpacity="0.4"
       />
-      <circle cx="15" cy="14.9998" r="3" fill="#5200FF" fill-opacity="0.8" />
+      <circle cx="15" cy="14.9998" r="3" fill="#5200FF" fillOpacity="0.8" />
     </svg>
   );
 };

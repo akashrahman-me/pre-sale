@@ -12,7 +12,7 @@ export const MoneyDeposit = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_875_311)">
+      <g clipPath="url(#clip0_875_311)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"

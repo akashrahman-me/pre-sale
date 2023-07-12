@@ -42,7 +42,7 @@ import { Partner } from "@/components/partner";
 
 const Home = () => {
   return (
-    <div className="h-full w-full bg-black">
+    <>
       {/* lg */}
       <header className="relative hidden border-b border-b-white/10 lg:block">
         <div className="flex h-[99px] items-center justify-between px-20">
@@ -711,7 +711,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

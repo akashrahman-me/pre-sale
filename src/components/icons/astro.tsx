@@ -13,7 +13,7 @@ export const Astro = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_562_35604)">
+      <g clipPath="url(#clip0_562_35604)">
         <circle
           cx="9"
           cy="9.88965"
