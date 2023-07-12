@@ -8,7 +8,7 @@ export const HorizontalLine = (props: React.SVGProps<SVGSVGElement>) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M1 0V259" stroke="#4100CC" stroke-opacity="0.3" />
+      <path d="M1 0V259" stroke="#4100CC" strokeOpacity="0.3" />
     </svg>
   );
 };
