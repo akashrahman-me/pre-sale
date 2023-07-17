@@ -3,7 +3,7 @@
 import Lottie from "lottie-react";
 import chartAnimation from "../../public/chart-animation.json";
 
-export const Chart = () => {
+export const ChartAnimation = () => {
   return (
     <Lottie
       className="absolute inset-0"

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export const USTD = ({
+export const USDT = ({
   className,
   ...props
 }: React.SVGProps<SVGSVGElement>) => {

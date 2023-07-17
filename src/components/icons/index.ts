@@ -15,7 +15,7 @@ export * from "./ellipse";
 export * from "./rings-sphere";
 export * from "./rings";
 export * from "./caret-down";
-export * from "./ustd";
+export * from "./usdt";
 export * from "./money-withdraw";
 export * from "./money-deposit";
 export * from "./bitcoin";

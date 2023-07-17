@@ -27,7 +27,7 @@ import {
   Rings,
   CaretDown,
   MoneyWithDraw,
-  USTD,
+  USDT,
   Bitcoin,
   Share,
   TrustWallet,
@@ -39,7 +39,7 @@ import {
   ArrowRight2,
 } from "@/components/icons";
 import { Partner } from "@/components/partner";
-import { Chart } from "@/components/chart";
+import { ChartAnimation } from "@/components/chart-animation";
 import { WhaleBannerAnimation } from "@/components/whale-banner-animation";
 import { ChevronRight } from "@/components/icons/chevron-right";
 import { TweetsEllipses } from "@/components/shapes/tweets-ellipses";
@@ -230,7 +230,7 @@ const Home = () => {
                   </div>
 
                   <div className="relative col-span-2 mt-[18px] h-[400px] sm:h-[600px] lg:mt-0 lg:h-auto">
-                    <Chart />
+                    <ChartAnimation />
                   </div>
 
                   {/* base */}
@@ -658,7 +658,7 @@ const Home = () => {
                             </span>
                             <span className="isolate flex items-center -space-x-1">
                               <Bitcoin className="relative z-[4] flex-none" />
-                              <USTD className="relative z-[3] flex-none" />
+                              <USDT className="relative z-[3] flex-none" />
                               <Astro className="relative z-[2] flex-none" />
                               <span className="relative z-[1] inline-flex h-[18px] w-[18px] flex-none items-center justify-center rounded-full bg-white/10 p-0">
                                 <Plus className="text-white" />
@@ -740,7 +740,7 @@ const Home = () => {
                             </div>
                             <div className="flex items-center justify-center pl-5">
                               <button className="inline-flex items-center gap-x-2 lg:gap-x-2.5">
-                                <USTD />
+                                <USDT />
                                 <span className="text-xs leading-5 lg:text-sm lg:leading-[22px]">
                                   USDT
                                 </span>
