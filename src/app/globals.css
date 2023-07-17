@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --swiper-navigation-size: theme("spacing.2");
-    --swiper-theme-color: theme("colors.white");
-  }
+:root {
+  --swiper-navigation-size: theme("spacing.2");
+  --swiper-theme-color: theme("colors.white");
 }
 
 .swiper-button-prev,

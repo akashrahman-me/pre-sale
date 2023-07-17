@@ -13,7 +13,7 @@ export const SwiperLg = () => {
     <Swiper
       navigation={true}
       modules={[Navigation]}
-      className="relative hidden lg:block"
+      className="!hidden lg:!block"
     >
       <SwiperSlide>
         <div className="grid grid-cols-7 gap-[30px] px-[60px]">

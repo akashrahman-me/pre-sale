@@ -823,7 +823,7 @@ const Home = () => {
                 <TweetsEllipses className="absolute inset-x-0 mx-auto -mt-32 max-w-[400px] lg:max-w-[528px]" />
               </div>
 
-              <div className="mt-[62px]">
+              <div className="relative mt-[62px]">
                 <SwiperLg />
                 <SwiperBase />
               </div>

@@ -10,11 +10,7 @@ import longTweet from "public/long-tweet.png";
 
 export const SwiperBase = () => {
   return (
-    <Swiper
-      navigation={true}
-      modules={[Navigation]}
-      className="relative lg:hidden"
-    >
+    <Swiper navigation={true} modules={[Navigation]} className="lg:!hidden">
       <SwiperSlide className="flex justify-center px-[60px]">
         <Image
           className="h-auto w-full max-w-[540px] object-contain"
