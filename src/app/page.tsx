@@ -855,104 +855,102 @@ const Home = () => {
             </section>
 
             <footer className="mt-[60px] border-t border-white/20 px-5 lg:mt-20">
-              <div className="grid gap-y-7 pt-3 lg:grid-cols-3 lg:pt-20">
-                <div className="col-span-1">
+              <div className="grid gap-y-7 pt-3 sm:grid-cols-2 lg:grid-cols-4 lg:pt-20">
+                <div>
                   <LogoLg />
                 </div>
-                <div className="col-span-2 grid grid-cols-2 gap-7 md:grid-cols-3">
-                  <div className="flex flex-col gap-y-4">
-                    <Link className="text-sm leading-[22px]" href="/overview">
-                      Overview
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/features"
-                    >
-                      Features
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/discover"
-                    >
-                      Discover
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/grow"
-                    >
-                      Grow
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/overview"
-                    >
-                      Build
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/overview"
-                    >
-                      Learn
-                    </Link>
-                  </div>
-                  <div className="flex flex-col gap-y-4">
-                    <Link className="text-sm leading-[22px]" href="/overview">
-                      Company
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/features"
-                    >
-                      About us
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/discover"
-                    >
-                      Careers
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/grow"
-                    >
-                      Contact us
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/overview"
-                    >
-                      Company News
-                    </Link>
-                  </div>
-                  <div className="flex flex-col gap-y-4">
-                    <Link className="text-sm leading-[22px]" href="/overview">
-                      Support
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/features"
-                    >
-                      Support center
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/discover"
-                    >
-                      Channel Verification
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/grow"
-                    >
-                      Announcements
-                    </Link>
-                    <Link
-                      className="text-sm leading-[22px] text-white/70"
-                      href="/overview"
-                    >
-                      Connect with Smartwhale
-                    </Link>
-                  </div>
+                <div className="flex flex-col gap-y-4">
+                  <Link className="text-sm leading-[22px]" href="/overview">
+                    Overview
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/features"
+                  >
+                    Features
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/discover"
+                  >
+                    Discover
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/grow"
+                  >
+                    Grow
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/overview"
+                  >
+                    Build
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/overview"
+                  >
+                    Learn
+                  </Link>
+                </div>
+                <div className="flex flex-col gap-y-4">
+                  <Link className="text-sm leading-[22px]" href="/overview">
+                    Company
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/features"
+                  >
+                    About us
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/discover"
+                  >
+                    Careers
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/grow"
+                  >
+                    Contact us
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/overview"
+                  >
+                    Company News
+                  </Link>
+                </div>
+                <div className="flex flex-col gap-y-4">
+                  <Link className="text-sm leading-[22px]" href="/overview">
+                    Support
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/features"
+                  >
+                    Support center
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/discover"
+                  >
+                    Channel Verification
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/grow"
+                  >
+                    Announcements
+                  </Link>
+                  <Link
+                    className="text-sm leading-[22px] text-white/70"
+                    href="/overview"
+                  >
+                    Connect with Smartwhale
+                  </Link>
                 </div>
               </div>
 
