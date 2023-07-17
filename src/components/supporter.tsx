@@ -4,10 +4,12 @@ export const Supporter = ({
   src,
   alt,
   comingSoon,
+  quality = 100,
 }: {
   src: StaticImageData;
   alt: string;
   comingSoon?: boolean;
+  quality?: number;
 }) => {
   return (
     <div className="relative inline-block h-[33px] rounded-[10px] bg-[#0F0F0F] px-[10px] py-[6px] lg:h-16 lg:px-5 lg:py-3">
@@ -17,6 +19,7 @@ export const Supporter = ({
         className="relative h-full w-auto object-contain"
         src={src}
         alt={alt}
+        quality={quality}
       />
 
       {comingSoon && (

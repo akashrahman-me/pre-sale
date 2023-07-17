@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --swiper-navigation-size: theme("spacing.2");
+    --swiper-theme-color: theme("colors.white");
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply rounded-full border border-[#5200FF] bg-[#5200FF] p-5;
+}
+
+.swiper-button-disabled {
+  @apply border-[#272727] bg-[#0f0f0f] !opacity-100;
+}

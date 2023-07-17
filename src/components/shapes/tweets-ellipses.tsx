@@ -1,14 +1,6 @@
-import { cn } from "@/lib/utils";
-
-export const TweetsEllipses = ({
-  className,
-  ...props
-}: React.SVGProps<SVGSVGElement>) => {
+export const TweetsEllipses = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      className={cn("h-[470px] w-[427x]", className)}
-      width="427"
-      height="470"
       viewBox="0 0 427 470"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

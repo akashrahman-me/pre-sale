@@ -1,5 +1,8 @@
-import "./globals.css";
+import "swiper/css";
+import "swiper/css/navigation";
 import { Inter } from "next/font/google";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 

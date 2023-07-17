@@ -9,11 +9,11 @@ import zkSync from "public/zk-sync.png";
 import fantom from "public/fantom.png";
 import polygon from "public/polygon.png";
 import avalanche from "public/avalanche.png";
-import threeVerticalLines from "public/three-vertical-lines.png";
 import lookOnChain from "public/look-on-chain.png";
 import spotOnChain from "public/spot-on-chain.png";
 import chainEdge from "public/chain-edge.png";
 import dexGuru from "public/dex-guru.png";
+
 import { Supporter } from "@/components/supporter";
 import { socialLinks } from "@/lib/constants";
 import { ShadowBehindHeroDash } from "@/components/shapes";
@@ -35,10 +35,17 @@ import {
   Cat,
   Astro,
   Plus,
-  Cookies,
   MoneyDeposit,
+  ArrowRight2,
 } from "@/components/icons";
 import { Partner } from "@/components/partner";
+import { Chart } from "@/components/chart";
+import { WhaleBannerAnimation } from "@/components/whale-banner-animation";
+import { ChevronRight } from "@/components/icons/chevron-right";
+import { TweetsEllipses } from "@/components/shapes/tweets-ellipses";
+import { SwiperLg } from "@/components/swiper-lg";
+import { SwiperBase } from "@/components/swiper-base";
+import { CookiesConcent } from "@/components/cookies-concent";
 
 const Home = () => {
   return (
@@ -223,13 +230,7 @@ const Home = () => {
                   </div>
 
                   <div className="relative col-span-2 mt-[18px] h-[400px] sm:h-[600px] lg:mt-0 lg:h-auto">
-                    <Image
-                      className="object-contain"
-                      src="/matic-polygon-sec-img.png"
-                      alt="Matic polygon"
-                      fill
-                      quality={100}
-                    />
+                    <Chart />
                   </div>
 
                   {/* base */}
@@ -311,6 +312,239 @@ const Home = () => {
               </div>
             </section>
 
+            <section className="mt-[58px] px-5 lg:mt-[150px]">
+              <div className="mx-auto max-w-[729px] text-center">
+                <h2 className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-[26px] font-medium leading-9 text-transparent lg:text-5xl lg:font-semibold lg:leading-[60px]">
+                  We follow only 0.01% of the best DEX traders
+                </h2>
+              </div>
+
+              <div className="pointer-events-none mt-12 select-none">
+                <div className="relative mx-auto max-w-[886px] rounded-[10px] px-6 py-3">
+                  <div className="absolute inset-0 rounded-[10px] border border-white/10" />
+                  <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-[#0D0D0D] to-[#0D0D0D]/30" />
+
+                  <div className="relative flex flex-col lg:flex-row">
+                    <div className="flex items-start">
+                      <div className="relative mt-3 inline-block rounded-[10px] border border-white/10 bg-white/10 pb-2.5 pl-5 pr-[13px] pt-2 text-right">
+                        <span className="block text-xs leading-5 text-white">
+                          10/06/2023
+                        </span>
+                        <span className="block text-xs leading-5 text-white">
+                          03:59 PM
+                        </span>
+                        <span className="absolute inset-y-0 -right-[7.5px] my-auto inline-block h-3.5 w-3.5 rotate-45 rounded-tr-[2px] border-r border-t border-white/10 bg-[#272727]" />
+                      </div>
+
+                      <div className="ml-[17px]">
+                        <svg
+                          className="h-[322px] w-5"
+                          viewBox="0 0 20 322"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="10" cy="42" r="9.5" stroke="#5200FF" />
+                          <path
+                            d="M10 52V322"
+                            stroke="url(#paint0_linear_460_35067)"
+                            strokeOpacity="0.5"
+                          />
+                          <path
+                            d="M10 0L10 32"
+                            stroke="url(#paint1_linear_460_35067)"
+                            strokeOpacity="0.5"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_460_35067"
+                              x1="10.5"
+                              y1="52"
+                              x2="10.5"
+                              y2="322"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#5200FF" />
+                              <stop
+                                offset="0.742422"
+                                stopColor="#6D27FF"
+                                stopOpacity="0.6"
+                              />
+                              <stop offset="0.974901" stopColor="#020202" />
+                            </linearGradient>
+                            <linearGradient
+                              id="paint1_linear_460_35067"
+                              x1="10.5"
+                              y1="-2.18557e-08"
+                              x2="10.5"
+                              y2="32"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#0D0D0D" />
+                              <stop offset="1" stopColor="#5200FF" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+
+                      <div className="ml-[22px] w-full pt-[34px] lg:max-w-[341px]">
+                        <div className="flex items-center justify-between">
+                          <div className="relative h-9 w-9 overflow-hidden rounded-full">
+                            <Image
+                              className="object-contain"
+                              src="/ape.png"
+                              alt="Ape"
+                              fill
+                              quality={100}
+                            />
+                          </div>
+
+                          <div className="rounded-full border border-white/10 bg-[#CE26264D] px-3.5 py-[5px] text-sm leading-[22px]">
+                            Selling
+                          </div>
+                        </div>
+                        <h3 className="mt-3.5 text-xl font-medium leading-8 text-white">
+                          Whales are selling $APE after the recent pump
+                        </h3>
+
+                        <div className="mt-3 flex items-center gap-x-2">
+                          <span className="inline-block w-[11px] shrink-0 border border-white/20"></span>
+                          <span className="text-sm leading-[22px] text-white/70">
+                            Wallet 0x5a8 moved 11,910 $APE to Houbi
+                          </span>
+                        </div>
+
+                        <div className="mt-2 flex items-center gap-x-2">
+                          <span className="inline-block w-[11px] shrink-0 border border-white/20"></span>
+                          <span className="text-sm leading-[22px] text-white/70">
+                            Whale 0x5a8 cleared 38K $APE to CEXs
+                          </span>
+                        </div>
+
+                        <Link
+                          href="/"
+                          className="gap-x-0.4 mt-[30px] inline-flex items-center rounded-full border border-white/10 bg-white/10 py-2 pl-[18px] pr-2 text-sm font-medium leading-[22px] text-white"
+                        >
+                          Read more
+                          <ChevronRight />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="flex-auto pt-[43px] lg:ml-[43px]">
+                      <div className="rounded-md border border-white/10 bg-white/5 p-4">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-semibold leading-5">
+                            Highlight
+                          </span>
+                          <span className="text-xs font-medium leading-[14.52px] text-[#00A478]">
+                            Over the past 4 hours
+                          </span>
+                        </div>
+                        <div className="mt-1 flex items-center gap-x-5">
+                          <span className="text-base font-medium leading-6 text-[#5200FF]">
+                            MOVED OUT
+                          </span>
+                          <span className="text-base font-medium leading-6">
+                            $3.27M in $APE
+                          </span>
+                        </div>
+
+                        <span className="mt-1 block text-xs leading-5">
+                          Total token trasferred
+                        </span>
+
+                        <div className="mt-2 inline-flex items-center gap-x-[7px] rounded-full border border-white/20 bg-[#1B1B1B] py-1 pl-[5px] pr-[17px]">
+                          <div className="relative h-5 w-5 overflow-hidden rounded-full">
+                            <Image
+                              className="object-cover"
+                              src="/ape.png"
+                              alt="Ape"
+                              fill
+                            />
+                          </div>
+                          <span className="text-xs font-semibold">
+                            49.91K{" "}
+                            <span className="font-medium text-white/70">
+                              APE
+                            </span>
+                          </span>
+                        </div>
+
+                        <div className="mt-3 border border-white/10" />
+
+                        <div className="mt-3">
+                          <span className="block text-xs leading-5">
+                            Related transactions
+                          </span>
+
+                          <div className="mt-2 space-y-2">
+                            <div className="flex items-center">
+                              <div className="inline-flex flex-auto items-center gap-x-[7px] rounded-full border border-white/20 bg-[#1B1B1B] py-1 pl-[5px] pr-[17px]">
+                                <div className="relative h-5 w-5 overflow-hidden rounded-full">
+                                  <Image
+                                    className="object-cover"
+                                    src="/ape.png"
+                                    alt="Ape"
+                                    fill
+                                  />
+                                </div>
+                                <span className="text-xs leading-[14.52px] text-white/70">
+                                  0X5a801
+                                </span>
+                              </div>
+                              <CaretDown className="shrink-0" />
+                              <div className="inline-flex flex-auto items-center gap-x-[7px] rounded-full border border-white/20 bg-[#1B1B1B] py-1 pl-[5px] pr-[17px]">
+                                <div className="relative h-5 w-5 overflow-hidden rounded-full">
+                                  <Image
+                                    className="object-cover"
+                                    src="/ape.png"
+                                    alt="Ape"
+                                    fill
+                                  />
+                                </div>
+                                <span className="text-xs leading-[14.52px] text-white/70">
+                                  0X5a801
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center">
+                              <div className="inline-flex flex-auto items-center gap-x-[7px] rounded-full border border-white/20 bg-[#1B1B1B] py-1 pl-[5px] pr-[17px]">
+                                <div className="relative h-5 w-5 overflow-hidden rounded-full">
+                                  <Image
+                                    className="object-cover"
+                                    src="/ape.png"
+                                    alt="Ape"
+                                    fill
+                                  />
+                                </div>
+                                <span className="text-xs leading-[14.52px] text-white/70">
+                                  0X5a801
+                                </span>
+                              </div>
+                              <CaretDown className="shrink-0" />
+                              <div className="inline-flex flex-auto items-center gap-x-[7px] rounded-full border border-white/20 bg-[#1B1B1B] py-1 pl-[5px] pr-[17px]">
+                                <div className="relative h-5 w-5 overflow-hidden rounded-full">
+                                  <Image
+                                    className="object-cover"
+                                    src="/ape.png"
+                                    alt="Ape"
+                                    fill
+                                  />
+                                </div>
+                                <span className="text-xs leading-[14.52px] text-white/70">
+                                  Multiple CEXs
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <section className="mx-auto mt-[68px] max-w-[1400px] px-5 lg:mt-[150px]">
               <div className="space-y-4 text-center">
                 <h2 className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-[26px] font-medium leading-9 text-transparent lg:text-5xl lg:font-semibold lg:leading-[60px]">
@@ -322,7 +556,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="mt-[18px] flex flex-wrap justify-center gap-4 lg:mt-12">
+              <div className="pointer-events-none mt-[18px] flex select-none flex-wrap justify-center gap-4 lg:mt-12">
                 <div className="relative rounded-[10px] bg-gradient-to-b from-white/10 to-white/5 px-[30px] pb-[33px] pt-6">
                   <div className="absolute inset-0 rounded-[10px] border border-white/10" />
                   <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-transparent to-black/95" />
@@ -332,11 +566,11 @@ const Home = () => {
                     </span>
                     <div className="relative mt-[55px] rounded-[10px] bg-gradient-to-b from-white/5 to-white/0 px-[39px] py-5">
                       <div className="absolute inset-0 rounded-[10px] border border-white/10" />
-                      <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-transparent to-black" />
-                      <div className="relative">
-                        <ol className="list-decimal font-medium leading-6 lg:text-xl">
-                          <li>Connect wallet to trading</li>
-                        </ol>
+                      <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-transparent to-black/80 to-100%" />
+                      <div>
+                        <span className="font-medium leading-6 lg:text-xl">
+                          Connect wallet to trading
+                        </span>
                         <div className="mt-5 space-y-2">
                           <button className="flex w-full items-center gap-x-2 rounded-full border border-white/10 bg-white/10 py-1 pl-1 pr-6 focus-visible:outline-none">
                             <Cat />
@@ -366,16 +600,23 @@ const Home = () => {
                   <div className="absolute inset-0 rounded-[10px] border border-white/10" />
                   <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-transparent to-black/95" />
                   <div className="relative">
-                    <ol className="list-decimal text-left text-sm leading-[22px] lg:text-[18px] lg:leading-[30px]">
-                      <li>Choose a vault you want to follow and trade</li>
-                    </ol>
+                    <span className="text-left text-sm leading-[22px] lg:text-lg lg:leading-[30px]">
+                      2. Choose a vault you want to follow and trade
+                    </span>
                     <div className="relative mt-6 rounded-[10px] bg-gradient-to-b from-white/5 to-white/0 py-3">
                       <div className="absolute inset-0 rounded-[10px] border border-white/10" />
                       <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-transparent to-black/80" />
-                      <div className="relative">
+                      <div>
                         <div className="flex items-center justify-between px-5 pb-2.5">
                           <div className="inline-flex items-center gap-x-[15px]">
-                            <Image src={threeVerticalLines} alt="" />
+                            <div className="relative h-[37px] w-[37px]">
+                              <Image
+                                src="/usdt.png"
+                                alt="USDT"
+                                fill
+                                quality={100}
+                              />
+                            </div>
                             <div className="space-y-[5px]">
                               <span className="font-medium leading-6 lg:text-xl">
                                 Pantera Capital
@@ -444,15 +685,15 @@ const Home = () => {
                             </span>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="mt-[27px] grid gap-2.5 px-5 lg:grid-cols-2">
-                        <button className="inline-flex items-center justify-center gap-x-2.5 rounded-full bg-white/20 px-5 py-2 text-xs font-bold leading-5 lg:text-sm lg:leading-[22px]">
-                          <MoneyWithDraw /> Withdraw
-                        </button>
-                        <button className="inline-flex items-center justify-center gap-x-2.5 rounded-full bg-[#5200FF] px-5 py-2 text-xs font-bold leading-5 lg:text-sm lg:leading-[22px]">
-                          <MoneyDeposit /> Deposit
-                        </button>
+                        <div className="mt-[27px] grid gap-2.5 px-5 lg:grid-cols-2">
+                          <button className="inline-flex items-center justify-center gap-x-2.5 rounded-full bg-white/20 px-5 py-2 text-xs font-bold leading-5 lg:text-sm lg:leading-[22px]">
+                            <MoneyWithDraw /> Withdraw
+                          </button>
+                          <button className="inline-flex items-center justify-center gap-x-2.5 rounded-full bg-[#5200FF] px-5 py-2 text-xs font-bold leading-5 lg:text-sm lg:leading-[22px]">
+                            <MoneyDeposit /> Deposit
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -461,14 +702,14 @@ const Home = () => {
                 <div className="relative rounded-[10px] bg-gradient-to-b from-white/10 to-white/5 px-[30px] pb-[33px] pt-6">
                   <div className="absolute inset-0 rounded-[10px] border border-white/10" />
                   <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-transparent to-black/95" />
-                  <div className="relative">
-                    <ol className="list-decimal text-left text-sm leading-[22px] lg:text-[18px] lg:leading-[30px]">
-                      <li>Track your gains and cash out at any time!</li>
-                    </ol>
+                  <div>
+                    <span className="text-left text-sm leading-[22px] lg:text-lg lg:leading-[30px]">
+                      3. Track your gains and cash out at any time!
+                    </span>
                     <div className="relative mt-6 rounded-[10px] bg-gradient-to-b from-white/5 to-white/0 p-5">
                       <div className="absolute inset-0 rounded-[10px] border border-white/10" />
                       <div className="absolute inset-0 rounded-[10px] bg-gradient-to-b from-transparent to-black/80" />
-                      <div className="relative">
+                      <div>
                         <div className="flex items-center gap-x-[15px]">
                           <MoneyWithDraw />
                           <span className="font-semibold leading-6 lg:text-xl">
@@ -492,12 +733,12 @@ const Home = () => {
                             </span>
                           </div>
                           <div className="mt-[5px] grid grid-cols-2 justify-items-stretch divide-x divide-white/20 rounded-[5px] bg-[#1B1B1B] px-5 py-[10px]">
-                            <div>
+                            <div className="pr-5">
                               <span className="text-xs leading-5 lg:text-sm lg:leading-[22px]">
                                 1000
                               </span>
                             </div>
-                            <div className="flex items-center justify-center">
+                            <div className="flex items-center justify-center pl-5">
                               <button className="inline-flex items-center gap-x-2 lg:gap-x-2.5">
                                 <USTD />
                                 <span className="text-xs leading-5 lg:text-sm lg:leading-[22px]">
@@ -508,14 +749,15 @@ const Home = () => {
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="my-5">
-                        <Link
-                          className="inline-flex items-center gap-x-2.5 text-sm leading-[22px] text-[#5C6DFF] lg:text-base lg:leading-6"
-                          href="/"
-                        >
-                          Advance Settings <ArrowRight />
-                        </Link>
+                        <div className="my-5">
+                          <Link
+                            className="inline-flex items-center gap-x-2.5 text-sm leading-[22px] text-[#5C6DFF] lg:text-base lg:leading-6"
+                            href="/"
+                          >
+                            Advance Settings{" "}
+                            <ArrowRight2 className="text-[#5200FF]" />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -525,18 +767,69 @@ const Home = () => {
 
             <section className="mx-auto mt-[58px] max-w-[1400px] px-5 lg:mt-[180px]">
               <h2 className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-center text-[26px] font-medium leading-9 text-transparent lg:text-5xl lg:font-semibold lg:leading-[60px]">
-                Our Partner
+                Our Partners
               </h2>
 
               <div className="mt-[18px] grid grid-cols-2 gap-[23px] lg:mt-[61px] lg:grid-cols-4">
-                <Partner src={lookOnChain} alt="Lookonchain" />
-                <Partner src={spotOnChain} alt="Spot on Chain" />
-                <Partner src={chainEdge} alt="Chain Edge" />
-                <Partner src={dexGuru} alt="Dex Guru" />
+                <Partner>
+                  <div className="h-7 lg:h-10">
+                    <Image
+                      className="h-full w-auto object-contain"
+                      src={lookOnChain}
+                      alt="Look on Chain"
+                      quality={100}
+                    />
+                  </div>
+                </Partner>
+                <Partner>
+                  <div className="h-[60px] lg:h-[100px]">
+                    <Image
+                      className="h-full w-auto object-contain"
+                      src={spotOnChain}
+                      alt="Spot on Chain"
+                      quality={100}
+                    />
+                  </div>
+                </Partner>
+                <Partner>
+                  <div className="h-7 lg:h-10">
+                    <Image
+                      className="h-full w-auto object-contain"
+                      src={chainEdge}
+                      alt="Chain Edge"
+                      quality={100}
+                    />
+                  </div>
+                </Partner>
+                <Partner>
+                  <div className="h-7 lg:h-10">
+                    <Image
+                      className="h-full w-auto object-contain"
+                      src={dexGuru}
+                      alt="Dex Guru"
+                      quality={100}
+                    />
+                  </div>
+                </Partner>
               </div>
             </section>
 
-            <section className="mx-auto mt-[68px] max-w-[1400px] px-5 text-center lg:mt-[172px]">
+            <section className="relative mx-auto mt-[78px] max-w-[1400px] lg:mt-[180px] lg:px-0">
+              <div className="px-5">
+                <h2 className="relative z-10 mx-auto max-w-[730px] bg-gradient-to-b from-white to-white/50 bg-clip-text text-center text-[26px] font-medium leading-9 text-transparent lg:text-5xl lg:font-semibold lg:leading-[60px]">
+                  What smartwhales users are saying
+                </h2>
+
+                <TweetsEllipses className="absolute inset-x-0 mx-auto -mt-32 max-w-[400px] lg:max-w-[528px]" />
+              </div>
+
+              <div className="mt-[62px]">
+                <SwiperLg />
+                <SwiperBase />
+              </div>
+            </section>
+
+            <section className="relative mx-auto mt-[68px] max-w-[1400px] px-5 text-center lg:mt-[172px]">
               <h2 className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-center text-[26px] font-medium leading-9 text-transparent lg:text-5xl lg:font-semibold lg:leading-[60px]">
                 We are SmartWhales.{" "}
                 <span className="block">
@@ -557,12 +850,7 @@ const Home = () => {
               </Link>
 
               <div className="relative mt-8 h-[139px] sm:h-[208.5px] lg:mt-14 lg:h-[278px]">
-                <Image
-                  className="object-contain"
-                  src="/robin-hood-sec.png"
-                  alt="We are the Robin Hood of Crypto"
-                  fill
-                />
+                <WhaleBannerAnimation />
               </div>
             </section>
 
@@ -680,33 +968,8 @@ const Home = () => {
                   ))}
                 </div>
               </div>
-              <div className="mt-2.5 pb-[30px] lg:mt-[23.5px]">
-                <div className="relative mx-auto flex max-w-[753px] flex-col items-center gap-x-4 rounded-full bg-gradient-to-b from-white/5 to-white/0 p-[14px] lg:flex-row lg:p-4">
-                  <div className="absolute inset-0 rounded-full border border-white/5" />
-                  <div className="absolute inset-0 rounded-full from-transparent to-black" />
-                  <div className="flex items-center justify-center gap-x-3 lg:gap-x-4">
-                    <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-black">
-                      <Cookies className="flex-none" />
-                    </div>
 
-                    <span className="text-base font-medium leading-6">
-                      we use{" "}
-                      <span className="text-[#5200FF] underline">cookies</span>{" "}
-                      to personalize your site experience and analyze site
-                      traffic
-                    </span>
-                  </div>
-
-                  <div className="mt-[22px] inline-flex items-center gap-x-2 lg:mt-0">
-                    <button className="rounded-full bg-[#5200FF] px-6 py-2 text-[15px] text-xs leading-5 text-white focus-visible:outline-none lg:leading-[22px]">
-                      Accept
-                    </button>
-                    <button className="rounded-full bg-white/20 px-6 py-2 text-[15px] text-xs leading-5 text-white focus-visible:outline-none lg:leading-[22px]">
-                      Decline
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <CookiesConcent />
             </footer>
           </div>
         </div>
