@@ -45,7 +45,7 @@ import { ChevronRight } from "@/components/icons/chevron-right";
 import { TweetsEllipses } from "@/components/shapes/tweets-ellipses";
 import { SwiperLg } from "@/components/swiper-lg";
 import { SwiperBase } from "@/components/swiper-base";
-import { CookiesConcent } from "@/components/cookies-concent";
+import { CookiesConsent } from "@/components/cookies-consent";
 
 const Home = () => {
   return (
@@ -225,7 +225,7 @@ const Home = () => {
                         </div>
                       </div>
 
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent from-10% to-black/80 to-90%"></div>
+                      <div className="absolute inset-0 animate-slide-down bg-gradient-to-b from-transparent to-black/80"></div>
                     </div>
                   </div>
 
@@ -277,7 +277,7 @@ const Home = () => {
                       </div>
                     </div>
 
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent from-10% to-black/80 to-90%"></div>
+                    <div className="absolute inset-0 animate-slide-down bg-gradient-to-b from-transparent from-10% to-black/80 to-90%"></div>
                   </div>
                 </div>
               </div>
@@ -967,7 +967,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <CookiesConcent />
+              <CookiesConsent />
             </footer>
           </div>
         </div>

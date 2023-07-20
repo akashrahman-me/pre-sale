@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { Cookies } from "./icons";
 
-export const CookiesConcent = () => {
+export const CookiesConsent = () => {
   const [show, setShow] = React.useState(false);
   const mounted = React.useRef(false);
 
