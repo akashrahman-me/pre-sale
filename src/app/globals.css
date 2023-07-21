@@ -9,7 +9,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  @apply rounded-full border border-[#5200FF] bg-[#5200FF] p-5;
+  @apply inset-y-0 my-auto rounded-full border border-[#5200FF] bg-[#5200FF] p-5;
 }
 
 .swiper-button-disabled {

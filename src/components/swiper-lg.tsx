@@ -2,13 +2,10 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import Image from "next/image";
-
-import imageTweet from "public/image-tweet.png";
-import shortTweet from "public/short-tweet.png";
-import longTweet from "public/long-tweet.png";
+import TweetEmbed from "react-tweet-embed";
 
 export const SwiperLg = () => {
+  const tweetEmbedOptions = { theme: "dark" };
   return (
     <Swiper
       navigation={true}
@@ -16,117 +13,45 @@ export const SwiperLg = () => {
       className="!hidden lg:!block"
     >
       <SwiperSlide>
-        <div className="grid grid-cols-7 gap-[30px] px-[60px]">
-          <div className="col-span-2 space-y-[30px]">
-            <Image
-              className="h-auto w-full object-contain"
-              src={imageTweet}
-              alt="Tweet with an image"
-              quality={100}
-            />
-            <Image
-              className="h-auto w-full object-contain"
-              src={shortTweet}
-              alt="Tweet with an image"
-              quality={100}
+        <div className="grid grid-cols-3 gap-[30px] px-[60px]">
+          <div>
+            <TweetEmbed
+              tweetId="1681922904458674177"
+              options={tweetEmbedOptions}
             />
           </div>
-          <div className="col-span-3 grid grid-cols-2 gap-[30px] pt-[68px]">
-            <div className="col-span-2">
-              <Image
-                className="h-auto w-full object-contain"
-                src={longTweet}
-                alt="Tweet with an image"
-                quality={100}
-              />
-            </div>
-            <div className="col-span-1">
-              <Image
-                className="h-auto w-full object-contain"
-                src={shortTweet}
-                alt="Tweet with an image"
-                quality={100}
-              />
-            </div>
-            <div className="col-span-1">
-              <Image
-                className="h-auto w-full object-contain"
-                src={shortTweet}
-                alt="Tweet with an image"
-                quality={100}
-              />
-            </div>
-          </div>
-          <div className="col-span-2 space-y-[30px]">
-            <Image
-              className="h-auto w-full object-contain"
-              src={shortTweet}
-              alt="Tweet with an image"
-              quality={100}
+          <div className="gap-[30px] pt-[68px]">
+            <TweetEmbed
+              tweetId="1679312411344633856"
+              options={tweetEmbedOptions}
             />
-            <Image
-              className="h-auto w-full object-contain"
-              src={imageTweet}
-              alt="Tweet with an image"
-              quality={100}
+          </div>
+          <div>
+            <TweetEmbed
+              tweetId="1680636103999496194"
+              options={tweetEmbedOptions}
             />
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="grid grid-cols-7 gap-[30px]  px-[60px]">
-          <div className="col-span-2 space-y-[30px]">
-            <Image
-              className="h-auto w-full object-contain"
-              src={imageTweet}
-              alt="Tweet with an image"
-              quality={100}
-            />
-            <Image
-              className="h-auto w-full object-contain"
-              src={shortTweet}
-              alt="Tweet with an image"
-              quality={100}
+        <div className="grid grid-cols-3 gap-[30px] px-[60px]">
+          <div>
+            <TweetEmbed
+              tweetId="1681964143799336960"
+              options={{ ...tweetEmbedOptions, cards: "hidden" }}
             />
           </div>
-          <div className="col-span-3 grid grid-cols-2 gap-[30px] pt-[68px]">
-            <div className="col-span-2">
-              <Image
-                className="h-auto w-full object-contain"
-                src={longTweet}
-                alt="Tweet with an image"
-                quality={100}
-              />
-            </div>
-            <div className="col-span-1">
-              <Image
-                className="h-auto w-full object-contain"
-                src={shortTweet}
-                alt="Tweet with an image"
-                quality={100}
-              />
-            </div>
-            <div className="col-span-1">
-              <Image
-                className="h-auto w-full object-contain"
-                src={shortTweet}
-                alt="Tweet with an image"
-                quality={100}
-              />
-            </div>
-          </div>
-          <div className="col-span-2 space-y-[30px]">
-            <Image
-              className="h-auto w-full object-contain"
-              src={shortTweet}
-              alt="Tweet with an image"
-              quality={100}
+          <div className="gap-[30px] pt-[68px]">
+            <TweetEmbed
+              tweetId="1681843994186387457"
+              options={tweetEmbedOptions}
             />
-            <Image
-              className="h-auto w-full object-contain"
-              src={imageTweet}
-              alt="Tweet with an image"
-              quality={100}
+          </div>
+          <div>
+            <TweetEmbed
+              tweetId="1677828720290086913"
+              options={tweetEmbedOptions}
             />
           </div>
         </div>
