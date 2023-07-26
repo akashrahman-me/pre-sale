@@ -134,7 +134,6 @@ const Home = () => {
                 className="object-contain"
                 src="/dashboard.png"
                 alt="Dashboard"
-                quality={100}
                 fill
               />
             </div>

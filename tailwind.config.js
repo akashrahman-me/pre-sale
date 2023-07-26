@@ -13,25 +13,31 @@ module.exports = {
       },
       keyframes: {
         "slide-down": {
+          "10%": {
+            top: "0px",
+          },
           "20%": {
-            top: "62px",
+            top: "74px",
+          },
+          "30%": {
+            top: "148px",
           },
           "40%": {
-            top: "124px",
+            top: "222px",
           },
-          "60%": {
-            top: "186px",
+          "50%": {
+            top: "296px",
           },
-          "80%": {
-            top: "248px",
+          "70%": {
+            top: "320px",
           },
-          "100%": {
-            top: "292px",
+          "95.25%": {
+            top: "320px",
           },
         },
       },
       animation: {
-        "slide-down": "slide-down 5.375s linear 3.5s forwards",
+        "slide-down": "slide-down 10s linear 2.75s normal infinite",
       },
     },
   },
