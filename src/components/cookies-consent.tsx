@@ -49,8 +49,8 @@ export const CookiesConsent = () => {
   return (
     <>
       {show && (
-        <div className="flex items-center justify-center pb-4">
-          <div className="relative mx-auto flex max-w-[753px] flex-col items-center gap-x-4 rounded-[20px] bg-gradient-to-b from-white/5 to-white/0 p-[14px] pl-[18px] lg:flex-row lg:rounded-full lg:p-4">
+        <div className="fixed inset-x-0 bottom-2 z-50 px-4">
+          <div className="relative mx-auto flex max-w-[753px] flex-col items-center gap-x-4 rounded-[20px] bg-gradient-to-b from-[#0e0e0e] to-[#020202] p-[14px] pl-[18px] lg:flex-row lg:rounded-full lg:p-4">
             <div className="absolute inset-0 rounded-[20px] border border-white/5 lg:rounded-full" />
             <div className="absolute inset-0 rounded-[20px] from-transparent to-black lg:rounded-full" />
             <div className="relative flex items-center justify-center gap-x-3 lg:gap-x-4">
