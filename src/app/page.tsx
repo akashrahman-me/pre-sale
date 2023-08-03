@@ -828,7 +828,7 @@ const Home = () => {
               </div>
             </section>
 
-            <section className="relative mx-auto mt-[68px] max-w-[1400px] px-5 text-center lg:mt-[172px]">
+            <section className="relative mx-auto mt-[24px] max-w-[1400px] px-5 text-center lg:mt-[172px]">
               <h2 className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-center text-[26px] font-medium leading-9 text-transparent lg:text-5xl lg:font-semibold lg:leading-[60px]">
                 We are SmartWhales.{" "}
                 <span className="block">
@@ -965,8 +965,6 @@ const Home = () => {
                   ))}
                 </div>
               </div>
-
-              <CookiesConsent />
             </footer>
           </div>
         </div>

@@ -35,15 +35,15 @@ export const CookiesConsent = () => {
   const acceptCookies = () => {
     try {
       localStorage.setItem("cookies-concent", "true");
+      setShow(false);
     } catch {}
-    setShow(false);
   };
 
   const declineCookies = () => {
     try {
       localStorage.setItem("cookies-concent", "false");
+      setShow(false);
     } catch {}
-    setShow(false);
   };
 
   return (
