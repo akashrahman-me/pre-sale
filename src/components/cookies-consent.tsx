@@ -32,16 +32,16 @@ export const CookiesConsent = () => {
     } catch {}
   }, []);
 
-  const acceptCookies = () => {
+  const declineCookies = () => {
     try {
-      localStorage.setItem("cookies-concent", "true");
+      localStorage.setItem("cookies-concent", "false");
       setShow(false);
     } catch {}
   };
 
-  const declineCookies = () => {
+  const acceptCookies = () => {
     try {
-      localStorage.setItem("cookies-concent", "false");
+      localStorage.setItem("cookies-concent", "true");
       setShow(false);
     } catch {}
   };
