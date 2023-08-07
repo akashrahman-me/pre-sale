@@ -11,35 +11,35 @@ import {
 
 export const socialLinks = [
   {
-    link: "https://twitter.com",
+    link: "https://twitter.com/SmartwhalesAI",
     icon: Twitter,
   },
+  // {
+  //   link: "https://github.com",
+  //   icon: GitHub,
+  // },
+  // {
+  //   link: "https://slack.com",
+  //   icon: Slack,
+  // },
+  // {
+  //   link: "https://linkedin.com",
+  //   icon: Linkedin,
+  // },
+  // {
+  //   link: "https://facebook.com",
+  //   icon: Facebook,
+  // },
   {
-    link: "https://github.com",
-    icon: GitHub,
-  },
-  {
-    link: "https://slack.com",
-    icon: Slack,
-  },
-  {
-    link: "https://linkedin.com",
-    icon: Linkedin,
-  },
-  {
-    link: "https://facebook.com",
-    icon: Facebook,
-  },
-  {
-    link: "https://telegram.com",
+    link: "https://t.me/+8caewQfyfaBkNDc0",
     icon: Telegram,
   },
   {
-    link: "https://tumblr.com",
+    link: "https://medium.com/@SmartWhales",
     icon: Tumblr,
   },
-  {
-    link: "https://messenger.com",
-    icon: Messenger,
-  },
+  // {
+  //   link: "https://messenger.com",
+  //   icon: Messenger,
+  // },
 ];

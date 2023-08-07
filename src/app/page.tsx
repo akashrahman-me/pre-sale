@@ -67,9 +67,9 @@ const Home = () => {
             </div>
             <Link
               className="h-[38px] shrink-0 rounded-full bg-[#5200FF] px-6 py-2 text-[15px] font-medium leading-[22px] text-white"
-              href="/"
+              href="https://forms.gle/fuYGBJQF5W4amLdt6"
             >
-              Enter App
+              Whitelist
             </Link>
           </div>
         </div>
@@ -90,10 +90,10 @@ const Home = () => {
         <div className="mt-[17.5px] flex items-center justify-between">
           <Logo />
           <Link
-            href="/"
+            href="https://forms.gle/fuYGBJQF5W4amLdt6"
             className="h-8 shrink-0 rounded-full bg-[#5200FF] px-5 py-1.5 text-xs font-medium leading-5 text-white"
           >
-            Enter App
+            Whitelist
           </Link>
         </div>
       </header>
@@ -110,20 +110,20 @@ const Home = () => {
 
             <div className="mt-[38px] inline-flex flex-col items-center gap-x-6 gap-y-[18px] lg:mt-12 lg:flex-row">
               <Link
-                href="/"
+                href="https://forms.gle/fuYGBJQF5W4amLdt6"
                 className="inline-flex h-[48px] items-center gap-x-[13px] rounded-full bg-[#5200FF] px-5 text-sm font-medium leading-[22px] text-white lg:gap-x-[12.75px] lg:px-6 lg:text-[15px]"
               >
                 <span>Whitelist for Early Access</span>
                 <ArrowRight />
               </Link>
 
-              <Link
+              {/* <Link
                 href="/"
                 className="inline-flex items-center gap-x-[13.5px] text-sm font-medium leading-[22px] text-white lg:gap-x-[12.75px] lg:text-[15px]"
               >
                 <span>Subscribe with Email</span>
                 <ArrowRight />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -841,10 +841,10 @@ const Home = () => {
               </h2>
 
               <Link
-                href="/"
+                href="https://forms.gle/fuYGBJQF5W4amLdt6"
                 className="mt-7 inline-flex h-11 items-center gap-x-[12.75px] rounded-full bg-[#5200FF] px-6 text-sm font-medium leading-[22px] text-white lg:mt-9 lg:h-12 lg:px-12 lg:text-[15px]"
               >
-                <span>Enter App</span>
+                <span>Whitelist</span>
                 <ArrowRight />
               </Link>
 
@@ -854,7 +854,7 @@ const Home = () => {
             </section>
 
             <footer className="mt-[60px] border-t border-white/20 px-5 lg:mt-20">
-              <div className="mx-auto grid max-w-[1400px] gap-y-7 px-5 pt-3 sm:grid-cols-2 lg:grid-cols-4 lg:pt-20">
+              {/* <div className="mx-auto grid max-w-[1400px] gap-y-7 px-5 pt-3 sm:grid-cols-2 lg:grid-cols-4 lg:pt-20">
                 <div>
                   <LogoLg />
                 </div>
@@ -951,7 +951,7 @@ const Home = () => {
                     Connect with Smartwhale
                   </Link>
                 </div>
-              </div>
+              </div> */}
 
               <div className="mt-[18px] flex items-center justify-center border-t border-white/10 py-[18px] lg:mt-[78px] lg:justify-between lg:py-[24.5px]">
                 <span className="lg hidden text-xs leading-[22px] text-white/40 lg:inline-block">
