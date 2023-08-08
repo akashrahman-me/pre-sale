@@ -5,6 +5,7 @@ export * from "./logo-lg";
 export * from "./messenger";
 export * from "./slack";
 export * from "./telegram";
+export * from "./discord"
 export * from "./tumblr";
 export * from "./twitter";
 export * from "./logo";

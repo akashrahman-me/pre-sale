@@ -1,12 +1,8 @@
 import {
   Twitter,
-  GitHub,
-  Slack,
-  Linkedin,
-  Facebook,
   Telegram,
   Tumblr,
-  Messenger,
+  Discord
 } from "@/components/icons";
 
 export const socialLinks = [
@@ -14,10 +10,10 @@ export const socialLinks = [
     link: "https://twitter.com/SmartwhalesAI",
     icon: Twitter,
   },
-  // {
-  //   link: "https://github.com",
-  //   icon: GitHub,
-  // },
+  {
+    link: "https://github.com",
+    icon: Discord,
+  },
   // {
   //   link: "https://slack.com",
   //   icon: Slack,
