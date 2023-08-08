@@ -1,17 +1,16 @@
-import {
-  Twitter,
-  Telegram,
-  Tumblr,
-  Discord
-} from "@/components/icons";
+import { TwitterX, Telegram, Medium, Discord } from "@/components/icons";
 
 export const socialLinks = [
   {
     link: "https://twitter.com/SmartwhalesAI",
-    icon: Twitter,
+    icon: TwitterX,
   },
   {
-    link: "https://github.com",
+    link: "https://medium.com/@SmartWhales",
+    icon: Medium,
+  },
+  {
+    link: "https://discord.gg/bGKr2DA3",
     icon: Discord,
   },
   // {
@@ -29,10 +28,6 @@ export const socialLinks = [
   {
     link: "https://t.me/+8caewQfyfaBkNDc0",
     icon: Telegram,
-  },
-  {
-    link: "https://medium.com/@SmartWhales",
-    icon: Tumblr,
   },
   // {
   //   link: "https://messenger.com",

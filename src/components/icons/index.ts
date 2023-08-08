@@ -5,9 +5,10 @@ export * from "./logo-lg";
 export * from "./messenger";
 export * from "./slack";
 export * from "./telegram";
-export * from "./discord"
+export * from "./discord";
 export * from "./tumblr";
 export * from "./twitter";
+export * from "./twitter-x";
 export * from "./logo";
 export * from "./arrow-right";
 export * from "./optimus";
@@ -28,3 +29,4 @@ export * from "./astro";
 export * from "./plus";
 export * from "./cookies";
 export * from "./arrow-right-2";
+export * from "./medium";
