@@ -7,7 +7,7 @@ export const Medium = ({
 }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      className={cn("h-[22px] w-[22px]", className)}
+      className={cn("h-[24px] w-[24px]", className)}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
