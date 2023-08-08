@@ -1,9 +1,4 @@
-import {
-  Twitter,
-  Telegram,
-  Tumblr,
-  Discord
-} from "@/components/icons";
+import { Twitter, Telegram, Tumblr, Discord } from "@/components/icons";
 
 export const socialLinks = [
   {
@@ -11,7 +6,7 @@ export const socialLinks = [
     icon: Twitter,
   },
   {
-    link: "https://github.com",
+    link: "https://discord.gg/bGKr2DA3",
     icon: Discord,
   },
   // {
