@@ -29,3 +29,4 @@ export * from "./astro";
 export * from "./plus";
 export * from "./cookies";
 export * from "./arrow-right-2";
+export * from "./medium";
