@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Endpoints
 
 - Dev: https://smartwhales-web-44b99f.netlify.app
+- Prod: https://www.smartwhales.ai
 
 ## Getting Started
 
