@@ -154,7 +154,7 @@ const Home = () => {
             <section className="relative z-[1] mx-auto max-w-[1400px] px-4 pb-4 md:pb-5 lg:px-5">
               <div className="mx-auto max-w-[930px] text-center">
                 <h2 className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-[26px] font-medium leading-[34px] text-transparent lg:text-5xl lg:leading-[60px]">
-                  Smartwhales support all DEXs across 12 blockchain network
+                  SmartWhales support all DEXs across 12 blockchain network
                 </h2>
               </div>
               <div className="mt-7 grid grid-cols-3 justify-items-center gap-x-[26px] gap-y-8 md:mt-[68px] md:gap-y-[41px] lg:grid-cols-4">
