@@ -98,8 +98,16 @@ const Home = () => {
         </div>
       </header>
 
-      <div className="relative">
+      <div className="bg-grid relative">
         <section className="mx-auto max-w-[1400px] px-4 pt-7 lg:px-5 lg:pt-[67.5px]">
+          <div className="relative">
+            <div className="shooter shooter--1"></div>
+            <div className="shooter shooter--2"></div>
+            <div className="shooter shooter--3"></div>
+            <div className="shooter shooter--4"></div>
+            <div className="shooter shooter--5"></div>
+            <div className="shooter shooter--6"></div>
+          </div>
           <div className="relative z-[1] mx-auto max-w-[828px] text-center">
             <h1 className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-[36px] font-semibold leading-[44px] text-transparent lg:text-[60px] lg:leading-[72px]">
               Copy-trade most successful crypto whales.
