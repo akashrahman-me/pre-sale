@@ -1,4 +1,10 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a842a283-8b91-4dee-947e-82d04e9a057c/deploy-status)](https://app.netlify.com/sites/smartwhales-web-44b99f/deploys)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://euc1-863889971009-dev-smartwhales-assets.s3.eu-central-1.amazonaws.com/static/logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://euc1-863889971009-dev-smartwhales-assets.s3.eu-central-1.amazonaws.com/static/logo-white.svg">
+  <img alt="SmartWhales" src="https://euc1-863889971009-dev-smartwhales-assets.s3.eu-central-1.amazonaws.com/static/logo-white.svg" width="400">
+</picture>
+
+---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
