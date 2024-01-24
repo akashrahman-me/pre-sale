@@ -10,7 +10,7 @@ export const socialLinks = [
     icon: Medium,
   },
   {
-    link: "https://discord.gg/bGKr2DA3",
+    link: "https://discord.com/invite/FmN33cR925",
     icon: Discord,
   },
   // {
@@ -26,7 +26,7 @@ export const socialLinks = [
   //   icon: Facebook,
   // },
   {
-    link: "https://t.me/+8caewQfyfaBkNDc0",
+    link: "https://t.me/+zg-qnzMC-xE0OTZk",
     icon: Telegram,
   },
   // {
