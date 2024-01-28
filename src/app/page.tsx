@@ -67,6 +67,12 @@ const Home = () => {
             </div>
             <Link
               className="h-[38px] shrink-0 rounded-full bg-[#5200FF] px-6 py-2 text-[15px] font-medium leading-[22px] text-white"
+              href="https://smartwhales.craft.me/smartwhales"
+            >
+              Documentation
+            </Link>
+            <Link
+              className="h-[38px] shrink-0 rounded-full bg-[#5200FF] px-6 py-2 text-[15px] font-medium leading-[22px] text-white"
               href="https://forms.gle/fuYGBJQF5W4amLdt6"
             >
               Whitelist
