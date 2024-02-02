@@ -15,6 +15,14 @@
 .swiper-button-disabled {
   @apply border-[#272727] bg-[#0f0f0f] !opacity-100;
 }
+.svg-container {
+  position: relative;
+}
+.svg-container svg:first-child {
+  position: absolute;
+  top: 7px;
+  left: 16px;
+}
 
 .bg-grid {
   background-image: radial-gradient(transparent 40%, #000), url(/bg-grid.svg);
