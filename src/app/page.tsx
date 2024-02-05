@@ -146,7 +146,7 @@ const Home = () => {
             <div className="absolute inset-0">
               <Image
                 className="object-contain"
-                src="/dashboard.png"
+                src="/dashboard.svg"
                 alt="Dashboard"
                 fill
               />
