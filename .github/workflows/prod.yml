@@ -48,16 +48,18 @@ jobs:
           APP_ID=${{ env.AMPLIFY_APP_ID }}
 
           # Run initial command to get the status
-          OUTPUT=$(aws amplify get-app --app-id $APP_ID)
-          STATUS=$(echo $OUTPUT | jq -r '.app.productionBranch.status')
+          OUTPUT=$(aws amplify list-jobs --app-id $APP_ID --branch-name ${{ env.BRANCH }})
+          STATUS=$(echo $OUTPUT | jq -r '.jobSummaries[0].status')
 
           # Keep querying until status is RUNNING, PENDING, SUCCEED, or timeout after 10 minutes
           ELAPSED=0
           while [[ ("$STATUS" == "RUNNING" || "$STATUS" == "PENDING") && "$ELAPSED" -lt 600 ]]; do
             sleep 10
             ELAPSED=$((ELAPSED+10))
-            OUTPUT=$(aws amplify get-app --app-id $APP_ID)
-            STATUS=$(echo $OUTPUT | jq -r '.app.productionBranch.status')
+            OUTPUT=$(aws amplify list-jobs --app-id $APP_ID --branch-name ${{ env.BRANCH }})
+
+            echo "STATUS=$STATUS"
+            STATUS=$(echo $OUTPUT | jq -r '.jobSummaries[0].status')
           done
 
           # Check final status and exit with appropriate code
