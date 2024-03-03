@@ -43,10 +43,10 @@ jobs:
         run: |
           curl -X POST -d {} "${{ env.DEPLOY_WEBHOOK_URL }}" -H "Content-Type:application/json"
 
-      - name: Wait for Amplify to finish remote build
-        uses: duckbytes/amplify-build-status@v1.1
-        with:
-          app-id: ${{ env.AMPLIFY_APP_ID }}
-          branch-name: ${{ env.BRANCH }}
-          commit-id: HEAD
-          wait: true
+      # - name: Wait for Amplify to finish remote build
+      #   uses: duckbytes/amplify-build-status@v1.1
+      #   with:
+      #     app-id: ${{ env.AMPLIFY_APP_ID }}
+      #     branch-name: ${{ env.BRANCH }}
+      #     commit-id: ${{ github.sha }}
+      #     wait: true
