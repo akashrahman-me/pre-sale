@@ -1,0 +1,52 @@
+name: Prod Release
+
+on:
+  push:
+    tags:
+      - 'prod-[0-9]+'
+
+permissions:
+  id-token: write
+  contents: write
+
+env:
+  STAGE: prod
+  BRANCH: main
+  AMPLIFY_APP_ID: ${{ secrets.PROD_AMPLIFY_APP_ID }}
+  DEPLOY_WEBHOOK_URL: ${{ secrets.PROD_DEPLOY_WEBHOOK_URL }}
+
+jobs:
+  deploy:
+    name: Deploy to AWS Amplify
+    runs-on: ubuntu-latest
+    env:
+      GH_NPM_TOKEN: ${{ secrets.GH_NPM_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout
+        with:
+          fetch-depth: 10
+
+      - name: Load Environment Variables
+        uses: ./.github/actions/setvars
+        with:
+          stage: ${{ env.STAGE }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github-actions-deploy
+          aws-region: ${{ env.AWS_REGION }}
+          mask-aws-account-id: no
+
+      - name: Dispatch Deployment
+        run: |
+          curl -X POST -d {} "${{ env.DEPLOY_WEBHOOK_URL }}" -H "Content-Type:application/json"
+
+      - name: Wait for Amplify to finish remote build
+        uses: duckbytes/amplify-build-status@v1.1
+        with:
+          app-id: ${{ env.AMPLIFY_APP_ID }}
+          branch-name: ${{ env.BRANCH }}
+          commit-id: ${{ github.sha }}
+          wait: true

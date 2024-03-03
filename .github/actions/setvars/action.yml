@@ -1,0 +1,14 @@
+name: 'Set environment variables'
+description: 'Configures environment variables for a workflow'
+
+inputs:
+  stage:
+    description: 'Stage name which is part of a file path to variable file.'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        sed "" ./.github/variables/${{ inputs.stage }}.env >> $GITHUB_ENV
+      shell: bash

@@ -10,8 +10,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Endpoints
 
-- Dev: https://smartwhales-web-44b99f.netlify.app
-- Prod: https://www.smartwhales.ai
+- Dev: [www.dev.smartwhales.co](https://www.dev.smartwhales.co/)
+- Prod: [www.smartwhales.ai](https://www.smartwhales.ai/)
 
 ## Getting Started
 
