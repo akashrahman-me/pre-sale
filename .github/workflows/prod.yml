@@ -57,9 +57,9 @@ jobs:
             sleep 10
             ELAPSED=$((ELAPSED+10))
             OUTPUT=$(aws amplify list-jobs --app-id $APP_ID --branch-name ${{ env.BRANCH }})
-
-            echo "STATUS=$STATUS"
             STATUS=$(echo $OUTPUT | jq -r '.jobSummaries[0].status')
+
+            echo "Status: $STATUS"
           done
 
           # Check final status and exit with appropriate code
