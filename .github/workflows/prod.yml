@@ -48,5 +48,5 @@ jobs:
         with:
           app-id: ${{ env.AMPLIFY_APP_ID }}
           branch-name: ${{ env.BRANCH }}
-          commit-id: HEAD
+          commit-id: ${{ github.sha }}
           wait: true
