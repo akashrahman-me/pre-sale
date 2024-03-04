@@ -3,7 +3,7 @@ name: Prod Release
 on:
   push:
     tags:
-      - 'prod-[0-9]+'
+      - "prod-[0-9]+"
 
 permissions:
   id-token: write
@@ -41,25 +41,35 @@ jobs:
 
       - name: Dispatch Deployment
         run: |
-          curl -X POST -d {} "${{ env.DEPLOY_WEBHOOK_URL }}" -H "Content-Type:application/json"
+          LATEST_JOB=$(aws amplify list-jobs --app-id d1iugfuik6369 --branch-name main | jq -r '.jobSummaries[0].jobId')
+
+          curl -X POST -d {} "${{ env.DEPLOY_WEBHOOK_URL }}" -H "Content-Type:application/json" -s
+
+          ELAPSED=0
+          CURRENT_JOB=$LATEST_JOB
+          while [[ ("$LATEST_JOB" == "$CURRENT_JOB") && "$ELAPSED" -lt 600 ]]; do
+            ELAPSED=$((ELAPSED+10))
+            CURRENT_JOB=$(aws amplify list-jobs --app-id d1iugfuik6369 --branch-name main | jq -r '.jobSummaries[0].jobId')
+            sleep 10
+          done
 
       - name: Wait for Amplify to finish remote build
         run: |
           APP_ID=${{ env.AMPLIFY_APP_ID }}
+          JOB_ID=$(aws amplify list-jobs --app-id d1iugfuik6369 --branch-name main | jq -r '.jobSummaries[0].jobId')
 
           # Run initial command to get the status
-          OUTPUT=$(aws amplify list-jobs --app-id $APP_ID --branch-name ${{ env.BRANCH }})
-          STATUS=$(echo $OUTPUT | jq -r '.jobSummaries[0].status')
+          STATUS="INIT"
 
           # Keep querying until status is RUNNING, PENDING, SUCCEED, or timeout after 10 minutes
           ELAPSED=0
-          while [[ ("$STATUS" == "RUNNING" || "$STATUS" == "PENDING") && "$ELAPSED" -lt 600 ]]; do
-            sleep 10
+          while [[ ("$STATUS" == "INIT" || "$STATUS" == "RUNNING" || "$STATUS" == "PENDING") && "$ELAPSED" -lt 600 ]]; do
             ELAPSED=$((ELAPSED+10))
-            OUTPUT=$(aws amplify list-jobs --app-id $APP_ID --branch-name ${{ env.BRANCH }})
-            STATUS=$(echo $OUTPUT | jq -r '.jobSummaries[0].status')
+            OUTPUT=$(aws amplify get-job --app-id $APP_ID --branch-name ${{ env.BRANCH }}) --job-id $JOB_ID | jq '.job')
+            STATUS=$(echo $OUTPUT | jq -r '.summary.status')
 
             echo "Status: $STATUS"
+            sleep 10
           done
 
           # Check final status and exit with appropriate code
