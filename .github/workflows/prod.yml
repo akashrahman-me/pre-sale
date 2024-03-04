@@ -40,36 +40,43 @@ jobs:
           mask-aws-account-id: no
 
       - name: Dispatch Deployment
+        id: dispatcher
         run: |
-          LATEST_JOB=$(aws amplify list-jobs --app-id d1iugfuik6369 --branch-name main | jq -r '.jobSummaries[0].jobId')
+          LAST_JOB_ID=$(aws amplify list-jobs --app-id ${{ env.AMPLIFY_APP_ID }} --branch-name ${{ env.BRANCH }} | jq -r '.jobSummaries[0].jobId')
 
           curl -X POST -d {} "${{ env.DEPLOY_WEBHOOK_URL }}" -H "Content-Type:application/json" -s
 
           ELAPSED=0
-          CURRENT_JOB=$LATEST_JOB
-          while [[ ("$LATEST_JOB" == "$CURRENT_JOB") && "$ELAPSED" -lt 600 ]]; do
-            ELAPSED=$((ELAPSED+10))
-            CURRENT_JOB=$(aws amplify list-jobs --app-id d1iugfuik6369 --branch-name main | jq -r '.jobSummaries[0].jobId')
+          CURRENT_JOB_ID=""
+
+          while [[ ("$CURRENT_JOB_ID" == "" || "$LAST_JOB_ID" == "$CURRENT_JOB_ID") && "$ELAPSED" -lt 600 ]]; do
             sleep 10
+            ELAPSED=$((ELAPSED+10))
+            CURRENT_JOB_ID=$(aws amplify list-jobs --app-id ${{ env.AMPLIFY_APP_ID }} --branch-name ${{ env.BRANCH }} | jq -r '.jobSummaries[0].jobId')
           done
+
+          echo "amplify_job_id=$CURRENT_JOB_ID" >> $GITHUB_OUTPUT
 
       - name: Wait for Amplify to finish remote build
         run: |
-          APP_ID=${{ env.AMPLIFY_APP_ID }}
-          JOB_ID=$(aws amplify list-jobs --app-id d1iugfuik6369 --branch-name main | jq -r '.jobSummaries[0].jobId')
+          JOB_ID=${{ steps.dispatcher.outputs.amplify_job_id }}
+
+          echo "JOB_ID=$JOB_ID"
 
           # Run initial command to get the status
           STATUS="INIT"
 
           # Keep querying until status is RUNNING, PENDING, SUCCEED, or timeout after 10 minutes
           ELAPSED=0
+
           while [[ ("$STATUS" == "INIT" || "$STATUS" == "RUNNING" || "$STATUS" == "PENDING") && "$ELAPSED" -lt 600 ]]; do
+            sleep 10
+
             ELAPSED=$((ELAPSED+10))
-            OUTPUT=$(aws amplify get-job --app-id $APP_ID --branch-name ${{ env.BRANCH }}) --job-id $JOB_ID | jq '.job')
+            OUTPUT=$(aws amplify get-job --app-id ${{ env.AMPLIFY_APP_ID }} --branch-name ${{ env.BRANCH }}) --job-id $JOB_ID | jq '.job')
             STATUS=$(echo $OUTPUT | jq -r '.summary.status')
 
             echo "Status: $STATUS"
-            sleep 10
           done
 
           # Check final status and exit with appropriate code
