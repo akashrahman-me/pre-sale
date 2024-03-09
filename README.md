@@ -21,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 When you push your changes to the **main** branch, it automatically triggers a build under the AWS development account.
 
-## Endopoints
+## Endpoints
 
 - [www.smartwhales.ai](https://www.smartwhales.ai/) - Production build.
 - [www.dev.smartwhales.co](https://www.dev.smartwhales.co/) - Development build.

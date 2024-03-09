@@ -9,7 +9,7 @@ import GoogleAnalytics from "@/components/google-analytics";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
-  title: "SmartWhales",
+  title: "SmartWhales AI",
 };
 
 export default function RootLayout({
