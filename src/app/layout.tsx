@@ -1,31 +1,29 @@
-import "swiper/css";
-import "swiper/css/navigation";
-import { Inter } from "next/font/google";
+import "../styles/main.css";
+import type {Metadata} from "next";
 
-import "./globals.css";
-import { CookiesConsent } from "@/components/cookies-consent";
-import GoogleAnalytics from "@/components/google-analytics";
+import {Inter} from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({
+   subsets: ["latin"],
+   weight: ["400", "500", "600", "700"],
+   variable: "--font-inter",
+});
 
-export const metadata = {
-  title: "SmartWhales AI",
+export const metadata: Metadata = {
+   title: "Smart Whales",
+   description:
+      "Copy-trade most successful crypto whales. Invest together with Binance Labs, Pantera Capital, and a16z.",
+   icons: "/images/favicon01.svg",
 };
 
 export default function RootLayout({
-  children,
+   children,
 }: {
-  children: React.ReactNode;
+   children: React.ReactNode;
 }) {
-  return (
-    <html className={inter.variable} lang="en">
-      <body className="bg-black text-white">
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-        ) : null}
-        {children}
-        <CookiesConsent />
-      </body>
-    </html>
-  );
+   return (
+      <html lang="en">
+         <body className={`${inter.variable}`}>{children}</body>
+      </html>
+   );
 }

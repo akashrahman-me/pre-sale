@@ -1,6 +1,0 @@
-{
-  "reject": [
-    "prettier",
-    "prettier-plugin-tailwindcss"
-  ]
-}
